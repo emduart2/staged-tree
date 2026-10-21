@@ -12,14 +12,16 @@ package "staged-tree" where
     ⟨`weak.linter.mathlibStandardSet, true⟩,
   ]
 
+require checkdecls from git "https://github.com/PatrickMassot/checkdecls.git"
+
 require "leanprover-community" / "mathlib" @ git "v4.35.0"
 
 @[default_target]
 lean_lib «StagedTree» where
   -- add any library configuration options here
 
-require checkdecls from git "https://github.com/PatrickMassot/checkdecls.git"
+
 
 meta if get_config? env = some "dev" then
 require «doc-gen4» from git
-  "https://github.com/leanprover/doc-gen4" @ "main"
+  "https://github.com/leanprover/doc-gen4" @ "v4.35.0"
