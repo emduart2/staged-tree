@@ -1,13 +1,24 @@
-# staged-tree
+# Staged Trees in Lean
 
-## GitHub configuration
+A formalization of **staged tree models** from algebraic statistics in Lean 4 and Mathlib.
+Staged trees are discrete statistical models defined by a rooted tree together with an
+equivalence relation on its vertices (the stages), whose edge labels are shared across
+vertices in the same stage. The goal is to formalize their definition and prove basic
+algebraic results about them.
 
-To set up your new GitHub repository, follow these steps:
+**Author:** Eliana Duarte
 
-* Under your repository name, click **Settings**.
-* In the **Actions** section of the sidebar, click "General".
-* Check the box **Allow GitHub Actions to create and approve pull requests**.
-* Click the **Pages** section of the settings sidebar.
-* In the **Source** dropdown menu, select "GitHub Actions".
+## Links
 
-After following the steps above, you can remove this section from the README file.
+* [Project home page](https://emduart2.github.io/staged-tree/)
+* [Blueprint](https://emduart2.github.io/staged-tree/blueprint/)
+* [Blueprint as PDF](https://emduart2.github.io/staged-tree/blueprint.pdf)
+* [Dependency graph](https://emduart2.github.io/staged-tree/blueprint/dep_graph_document.html)
+* [Documentation](https://emduart2.github.io/staged-tree/docs/)
+
+## Building
+
+```bash
+lake exe cache get
+lake build
+```
